@@ -14,8 +14,15 @@ void    load_map(t_game *gmae)
     while ((line = get_next_line(fd)))
     {
         if (line[0] == '\n' )
-            error_filename
+        {
+            free (line);
+            printf(stderr, "Erros :  empty line in map\n");
+            exit(EXIT_FAILURE);
+        }
+    
+            
     }
+
 
 
 
